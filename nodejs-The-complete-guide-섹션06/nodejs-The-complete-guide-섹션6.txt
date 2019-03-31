@@ -1,0 +1,10 @@
+Templating Engines
+EJS
+<p> <%= name %></p>
+
+Pug (jade)
+p #{name}
+
+Handlebars
+<p> {{name }} </p>
+
