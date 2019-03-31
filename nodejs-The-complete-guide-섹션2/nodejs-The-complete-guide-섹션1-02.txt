@@ -1,0 +1,82 @@
+visual studio
+ctrl + p 
+
+color theme 실행
+
+dark + 설정
+
+view extentions
+
+Material Icon Theme
+
+--- function 이름에 ( ) 를 붙이지 않으면
+
+reference만 하라는 의미.
+
+그래서 실행하란 의미가 아니므로
+
+event가 실행될시에 실행하게 할수 있다. 
+
+
+----  13 에로우 function
+why would we use?
+
+a bit shorter than function syntax
+
+자바스크립트의 this가 동적으로 바인딩되는 이유
+자바스크립트는
+함수를 호출할 때 함수가 어떻게 호출되었는지에 따라 
+this에 바인딩할 객체가 동적으로 결정
+
+일반 함수 표기 function() { } 를 쓰면
+호출되는 곳에 따라서 바인딩 객체가 결정되기 때문에
+원하는 결과가 출력되지 않을수 있음.
+
+반면에 => 에로우 function을 쓰면 
+this에 바인딩할 객체가 정적으로 결정
+화살표 함수의 this는 언제나 상위 스코프의 this를 가리킨다
+
+Lexical this라 부름 렉시컬 스코프
+
+참조 https://poiemaweb.com/es6-arrow-function
+
+
+--- 17 가장 중요한 operator 두가지가 있다.
+
+rest and spread operator
+
+-- spread operator
+{...obj}, [...arr]
+같은 형태로 새로운 복사 객체, 배열을 만드는것. 
+
+-- rest operator
+spread와 반대
+
+function의 파라미터 자체를 
+(...arr) , (...obj)
+로 받을수 있는것. 
+
+-- destructuring
+파라미터를 객체화 시켜서 받는것. 
+
+또는 선언시에 원하는 key, value를 뽑아서 만드는것
+
+const { name, age } = person 같이
+
+여기서 주요사항으론 *****
+
+const [var1, var2] = vars;
+console.log(var1, var2); 
+로 출력 가능한것. 
+배열인데 인덱스가 아닌 key값으로 
+
+이게 가능한이유가 destructuring 이다.
+
+-- template literals
+
+const name = "Max";
+const age = 29;
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+${ } 형태로 넣을수 있다.
+여기서 ` ` 는 물결 표시 쪽. backticks 
