@@ -1,1 +1,33 @@
 몽고디비
+
+one major purpose, that you could store and work
+
+large scale applications
+
+
+example mongodb is schemaless, inside of one collection, your documents 
+which is your data, your entry so to say don't have to have the same structure. 
+In SQL that was totally different,
+
+
+
+Let's say here, some user data for the orders and you copy that into the orders
+and then you have that data right there whenever you fetch all orders without you having to fetch all
+orders, then look for the fitting users and fetch them too
+and this is part of what makes NoSQL and especially mongodb so fast and efficient.
+
+depicting ralations
+
+
+
+We can still build relations manually with references as you saw but you should always know if that
+is the best approach right now
+or if you can use an embedded document with too much work.
+So these are NoSQL characteristics and therefore the mongodb characteristics
+and these are also part of the reason why mongodb is so popular because of the speed and the flexibility
+
+몽고 db의 find() 메소드는 하나 찾고 그다음 찾고 그다음 찾고
+
+
+
+
