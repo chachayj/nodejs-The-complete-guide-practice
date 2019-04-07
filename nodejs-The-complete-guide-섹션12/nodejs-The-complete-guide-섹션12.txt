@@ -27,7 +27,7 @@ So these are NoSQL characteristics and therefore the mongodb characteristics
 and these are also part of the reason why mongodb is so popular because of the speed and the flexibility
 
 몽고 db의 find() 메소드는 하나 찾고 그다음 찾고 그다음 찾고
-
+ID의 objectId라는 특별한 값.
 
 
 
