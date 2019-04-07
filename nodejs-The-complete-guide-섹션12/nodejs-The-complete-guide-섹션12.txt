@@ -41,3 +41,7 @@ id
 
 id 객체를 항상 새로 생성해서 문제가 된것. 
 
+insertOne()
+
+
+products와 users의 관계를 맺을때는 userid를 넣어서 만들게한다.
