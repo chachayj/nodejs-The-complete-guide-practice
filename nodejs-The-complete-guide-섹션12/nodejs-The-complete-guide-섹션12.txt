@@ -29,5 +29,7 @@ and these are also part of the reason why mongodb is so popular because of the s
 몽고 db의 find() 메소드는 하나 찾고 그다음 찾고 그다음 찾고
 ID의 objectId라는 특별한 값.
 
+타입은 매번 변형하기보다는 model에서 받을때 맞춰서 받아주는게 좋다. 
 
+deleteOne()
 
