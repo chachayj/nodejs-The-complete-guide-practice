@@ -33,3 +33,11 @@ ID의 objectId라는 특별한 값.
 
 deleteOne()
 
+
+so _id down there will always be defined
+and if it's just such an empty or automatically generated object id object, this should be the issue here.
+
+id
+
+id 객체를 항상 새로 생성해서 문제가 된것. 
+
