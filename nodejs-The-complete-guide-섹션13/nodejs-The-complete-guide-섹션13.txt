@@ -6,3 +6,10 @@ module.exports = mongoose.model('Product', productSchema);
 
 몽구스는 model 네이밍을 자동으로 collection 네임으로 만든다. 
 
+ userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  }
+
+ref는 related in collection(model) 을 가리킴. 
