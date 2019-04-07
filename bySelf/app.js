@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 
 const errorController = require('./controllers/error');
-// const User = require('./models/user');
+const User = require('./models/user');
 
 const app = express();
 
@@ -38,6 +38,18 @@ mongoose
     'mongodb+srv://chacha:merlot@cluster0-3zuzi.mongodb.net/shop?retryWrites=true', { useNewUrlParser: true }
   )
   .then(result => {
+    User.findOne().then(user => {
+      if (!user) {
+        const user = new User({
+          name: 'ChaCha',
+          email: 'cha@test.com',
+          cart: {
+            items: []
+          }
+        });
+        user.save();
+      }
+    });
     app.listen(3000);
   })
   .catch(err => {
