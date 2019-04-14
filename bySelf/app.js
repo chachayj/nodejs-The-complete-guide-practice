@@ -6,11 +6,14 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
+const flash = require('connect-flash');
+
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
 const MONGODB_URI = 'mongodb+srv://chacha:merlot@cluster0-3zuzi.mongodb.net/shop?retryWrites=true';
+
 
 const app = express();
 const store = new MongoDBStore({
@@ -37,6 +40,7 @@ app.use(
   })
 );
 app.use(csrfProtection);
+app.use(flash());
 
 app.use((req, res, next) => {
   if (!req.session.user) {
@@ -63,7 +67,7 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(MONGODB_URI, { useNewUrlParser: true })
   .then(result => {
     app.listen(3000);
   })
