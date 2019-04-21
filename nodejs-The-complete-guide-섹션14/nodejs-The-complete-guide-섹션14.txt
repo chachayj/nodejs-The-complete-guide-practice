@@ -1,3 +1,13 @@
 cookie
 
 login할때 사용. 
+
+
+session은 서버사이드
+
+cookie는 client사이드
+
+
+
+session은 유저들끼리 독립된 페이지를 처리해주기 위한 것. 
+다른유저가 다른 유저의 데이터 접근하지 못하도록 하는 것. 

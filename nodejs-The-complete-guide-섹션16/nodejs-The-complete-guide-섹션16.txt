@@ -1,0 +1,18 @@
+email
+
+How does sending mails work?
+
+you cant trivially create a mailling server. 
+
+is totally different to handling incoming requests and responses,
+
+이메일 서버를 직접 구축하진 않을 것이다. 
+
+it is very complex
+
+그래서 3rd party를 이용할 것이다. 
+
+-- nodemailer를 사용할것
+
+transporter
+

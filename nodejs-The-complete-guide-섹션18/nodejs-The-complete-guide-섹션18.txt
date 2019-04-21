@@ -1,0 +1,8 @@
+﻿Advanced Authentication
+
+유저가 리셋한 정보도 DB에 저장해야한다. 
+crypto라이브러리 randomBytes메소드 사용
+
+Authorization이 왜 필요하냐면 
+
+다른 유저의 데이터를 맘대로 사용하거나 삭제할수 있어서 
