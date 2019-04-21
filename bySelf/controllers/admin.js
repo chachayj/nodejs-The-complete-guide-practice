@@ -41,7 +41,7 @@ exports.postAddProduct = (req, res, next) => {
   }
 
   const product = new Product({
-    _id: new mongoose.Types.ObjectId('5cbc63e238fc401510bbd96b'),
+    _id: new mongoose.Types.ObjectId('5badf72403fd8b5be0366e81'),
     title: title,
     price: price,
     description: description,
@@ -70,7 +70,10 @@ exports.postAddProduct = (req, res, next) => {
       //   errorMessage: 'Database operation failed, please try again.',
       //   validationErrors: []
       // });
-      res.redirect('/500');
+      // res.redirect('/500');
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
     });
 };
 
@@ -95,7 +98,11 @@ exports.getEditProduct = (req, res, next) => {
         validationErrors: []
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
+    });
 };
 
 exports.postEditProduct = (req, res, next) => {
