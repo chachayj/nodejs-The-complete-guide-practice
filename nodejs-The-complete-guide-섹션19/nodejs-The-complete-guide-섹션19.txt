@@ -1,0 +1,22 @@
+﻿Error Handling
+
+Technical/ Network
+DB server down, show error page
+
+Expected
+file cant be read, database operations fails
+posibly retry
+
+Bugs/ Logical 
+fix during development
+
+Error is thrown
+synchronous code : try-catch
+Asynchronous code : then()-catch()
+-> choose 'Directly handle error' or 'Use Express error handling function(middleware)
+
+No error is thrown
+Validate values
+-> Throw error or Directly handle "error"
+
+
