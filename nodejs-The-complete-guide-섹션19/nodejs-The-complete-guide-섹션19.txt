@@ -19,4 +19,12 @@ No error is thrown
 Validate values
 -> Throw error or Directly handle "error"
 
+2xx(성공) -> 200 operation succeed
+	    201 resource created
 
+3xx(redirect) -> 301 moved permanently
+4xx(client-side error) -> 401 not authenticated
+			403 not authorized
+			404 not found
+			422 invalid input
+5xx(server side error) -> 500	server side , timeout
