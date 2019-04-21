@@ -7,3 +7,20 @@
 database와 비교하는 데이터가 일치하는지 확인하는 작업.
 
 접근 금지 처리. 
+
+
+sanitizing 이란?
+
+공백을 포함한 문자열처리 등의 DB에 uniform화 시키는것. 
+
+So sanitising input is also something that makes sense to be done.
+
+Cross-site scripting attacks sanitation which is a security feature is by the way something I'll
+
+cover in the security module of this course, so we'll focus on the visual sanitization for now not on security
+
+relevant sanitising.
+
+이메일 뒤에 스페이스 가 추가될때 trim시켜서 DB에 저장되도록 처리하는 것. 
+
+cross-site scripting attack (XSS)
