@@ -14,7 +14,7 @@ we can serve more than one folder statically and statically serving a folder sim
 2. invoice should only be available to me
 
 
-3. be streamed to the browser and will contail the data and the data will basically be downloaded
+3. be streamed to the browser and will contain the data and the data will basically be downloaded
 by the browser step by step and for large files, 
 this is a huge advantage because node never has to pre-load all the data into memory
 but just streams it to the client on the fly and the most it has to store is one chunk of data.
