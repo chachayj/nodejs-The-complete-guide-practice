@@ -7,15 +7,15 @@ const { validationResult } = require('express-validator/check');
 
 const User = require('../models/user');
 
-
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
       api_key:
-        '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'
+        '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'
     }
   })
 );
+
 exports.getLogin = (req, res, next) => {
   let message = req.flash('error');
   if (message.length > 0) {
@@ -166,7 +166,6 @@ exports.postSignup = (req, res, next) => {
       return next(error);
     });
 };
-
 
 exports.postLogout = (req, res, next) => {
   req.session.destroy(err => {

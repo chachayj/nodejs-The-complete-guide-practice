@@ -1,1 +1,12 @@
 ﻿file 다운로드 & 업로딩
+
+Multer
+
+Filtering files by mimetype
+
+serving Images statically
+유저에게 이미지를 보여줄때 
+1. publicly available to everyone like our product img is that we simply serve our img
+folder in a static way
+
+
