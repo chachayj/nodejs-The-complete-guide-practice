@@ -1,0 +1,4 @@
+﻿페이징
+
+몽고디비의 sql 
+find 중 skip과 limit를 이용. 
