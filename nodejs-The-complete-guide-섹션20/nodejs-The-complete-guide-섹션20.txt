@@ -9,4 +9,6 @@ serving Images statically
 1. publicly available to everyone like our product img is that we simply serve our img
 folder in a static way
 
+we can serve more than one folder statically and statically serving a folder simply
 
+2. invoice should only be available to me
