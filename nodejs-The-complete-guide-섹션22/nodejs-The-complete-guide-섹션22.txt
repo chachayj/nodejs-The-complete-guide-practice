@@ -1,4 +1,18 @@
-﻿페이징
+﻿async request 비동기 리퀘스트
 
-몽고디비의 sql 
-find 중 skip과 limit를 이용. 
+리퀘스트를 보내 놓고 응답이 올때까지 다른 작업을 진행하는 호출방식
+
+응답이 왔을때 리다이렉트 하지 않고 페이지를 새로 구성하는 것. 
+
+public 스크립트 안에서 async request를 보내도록 로직을 작성. 이때 
+
+헤더에 csrf 토큰도 포함해서 rest full request를 보낸다. 
+
+이때 json포맷으로 보내지 않고 
+
+응답을 받았을때 
+
+미들웨어에서  json 파서를 한다. 
+
+응답을 받았으면 dom element를 remove한다. 
+
