@@ -11,6 +11,8 @@ const multer = require('multer');
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
+const shopController = require('./controllers/shop');
+const isAuth = require('./middleware/is-auth');
 
 const MONGODB_URI = 
   'mongodb+srv://chacha:merlot@cluster0-3zuzi.mongodb.net/shop?retryWrites=true';
@@ -70,12 +72,12 @@ const MONGODB_URI =
       store: store
     })
   );
-  app.use(csrfProtection);
+  // app.use(csrfProtection);
   app.use(flash());
   
   app.use((req, res, next) => {
     res.locals.isAuthenticated = req.session.isLoggedIn;
-    res.locals.csrfToken = req.csrfToken();
+    // res.locals.csrfToken = req.csrfToken();
     next();
   });
   
@@ -95,6 +97,14 @@ const MONGODB_URI =
       .catch(err => {
         next(new Error(err));
       });
+  });
+
+  app.post('/create-order', isAuth, shopController.postOrder);
+
+  app.use(csrfProtection);
+  app.use((req, res, next) => {
+    res.locals.csrfToken = req.csrfToken();
+    next();
   });
   
   app.use('/admin', adminRoutes);

@@ -17,5 +17,19 @@
             <div class="centered">
                 <h2>Total: <%= totalSum %></h2>
             </div>
+            <div class="centered">
+                <form action="your-server-side-code" method="POST">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_SdMWR8S5Y4MxDFbsPJp5Bw5c00QyMbVAD8"
+                      data-amount="<%= totalSum * 100 %>"
+                      data-name="Demo Site"
+                      data-description="Widget"
+                      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                      data-locale="auto"
+                      data-currency="usd">
+                    </script>
+                  </form>
+            </div>
         </main>
         <%- include('../includes/end.ejs') %>
