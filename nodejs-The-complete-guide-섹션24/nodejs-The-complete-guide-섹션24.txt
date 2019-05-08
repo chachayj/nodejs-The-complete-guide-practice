@@ -1,0 +1,69 @@
+﻿REST API
+
+왜 사용 하고 무엇인가
+
+모든 Frontend가 HTML, 탬플릿 엔진을 사용 하지 않는다. 
+모바일 앱, 싱글 페이지 웹 앱, service APIs
+
+그러므로 데이터만을 필요로 한다. 이를 위해서 Rest API를 설계한다.
+
+여러가지 다른 종류의 response가 필요하기 때문에
+
+서버안의 로직과는 상관없이 데이터 포맷을 통일화 시키는 것이 목적. 
+
+
+rest API or rest stands for 
+Representaional State Transfer
+the simple translation i like to use is that we transfer data instead of user interface
+
+instead of html, we just transfer data and we leave it to the client or to the frontend,
+be that a mobile app, be that a single page application
+
+we leave it to that frontend to then do with this data whatever it wants to do.
+(키 포인트)
+a decoupled frontend or you might need to and then rest APIs are the solution. 
+
+only the response and the request data changes but not the general server side logic
+
+you do that in exactly the same way when building a Rest API and that is really important to me because
+
+often, Rest APIs and traditional web apps where you render the views on the server are seen as
+
+two totally different things.
+
+they only differ in the response and in the kind of data you expect but they dont differ
+
+what happens on the server
+
+data format은 json이 이겼다. 
+
+
+
+
+
+Reason for using Rest API
+Not every Frontend (UI) requires HTML Pages
+
+ex) 
+Mobile Apps == Java, swifts, C IOS 
+
+Single page web app  
+
+Service APIs
+
+it's not the frontend that requires us to build a rest API on own 
+
+but this is another example for a case
+where you only need the data and no user interface
+
+we just have a backend that needs to serve us data and 
+that is a core idea or that is the core idea of building rest api
+
+APIs becuase there we need a different kind of response. And rest API or rest stands for 
+Representaional State Transfer
+the simple translation i like to use is that we transfer data instead of user interface
+
+
+
+
+
