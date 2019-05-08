@@ -1,0 +1,19 @@
+﻿Payments
+
+3rd party 페이먼트 사용 할것임. 
+
+payment process
+
+1. collect payment method
+2. verify payment method
+3. charge payment method
+4. manage payment
+5. process order
+
+Stripe사용 할것임 
+
+client가 collect credit card data를 하면 stripe servers로 데이터를 보내고. 
+
+token을 발행 해줌. 해당 토큰을 server에서 받아서 charge하고 create payment data해서
+
+stripe serves로 보냄. 
