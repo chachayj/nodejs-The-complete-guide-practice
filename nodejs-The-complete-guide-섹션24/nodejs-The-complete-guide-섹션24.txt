@@ -11,6 +11,67 @@
 
 서버안의 로직과는 상관없이 데이터 포맷을 통일화 시키는 것이 목적. 
 
+-- Data formats
+1. HTML = data + structure, css, elements, page와 code를 리턴함. 불필요한 데이터가 많다.
+그래서 parse하기 어렵다. 
+2. Plain Text = only data, no UI 하지만 사람을 위한 text이다. 컴퓨터를 위한 text가아님. 
+
+3. XML = tags, 컴퓨터가 이해하기도 좋다. 하지만 special xml parser가 필요함. 
+처리하기 위한 overhead가 있다. a lot of extra text 
+
+4. JSON = just data, 컴퓨터 인식 가능, javascript object 기반. 
+
+--------------Routing
+전통 방식에선 links와 form을 보냈다. 
+Rest에선 http method를 호출한다.  
+이 reqeust는 클라이언트가 async 리퀘스트로 보내며 fetch API, AJAX 방식으로 
+클라이언트도 special 하다. html response를 기대하지 않고 
+http method와 path를 호출한다. 
+
+API endpoint의 네이밍에 기대되는 logic으로 서버가 실행되어야 한다.
+
+------- http methods  
+links와 forms만 보낸다면 get과 post만을 사용해도 괜찮다. 
+Get = get a resource
+Post = create, append (never overwrite or should never overwrite)
+Put = create, overwrite
+Patch = updating parts, not overwrite
+Delete = delete a resource 
+
+------ Principles
+1. uniform interface = req, res data structure가 명확해야한다. 예측할수 있도록 
+2. stateless interactions = super important with authentication
+rest API를 설계 할때 server와 client는 완전히 분리되어 있다. 
+common history를 공유하지 않는다. 
+no connection history is stored and no sessions will be used
+히스토리가 저장되지 않고 세션이 사용되지 않는다. 
+왜냐면 모든 리퀘스트가 no prior req로 취급되어서 
+서버는 모든 req를 스스로 본다. 
+세션을 저장하지 않고, client를 상관하지 않는다. 
+
+3. cacheable  
+클라이언트에게 response가 얼마동안 valid 되는지를 header에 알려줘야 한다. 
+4. Client-Server 
+분리, client는 db에 저장되는걸 신경쓰지 않아도 된다. server가 책임진다.
+5. Layered System
+다른서버에 전달해야 할때 
+data만을 신경쓰면 된다. 
+API로서 제공되어야 한다. 
+6. Code on Demand
+Rest API도 실행가능한 코드를 클라이언트에게 보낼수 있다. 
+하지만 현실적으론 종종볼순 없다. 
+
+즉 csrf 토큰을 사용할수 없는것 같음?? 
+왜냐면 csrf토큰은 웹페이지 html 방식에서 사용 . 
+
+그러므로 사용하는게 oauth 2.0 인듯함. 
+
+
+
+
+
+
+
 
 rest API or rest stands for 
 Representaional State Transfer
