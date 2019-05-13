@@ -40,6 +40,7 @@ Delete = delete a resource
 
 ------ Principles
 1. uniform interface = req, res data structure가 명확해야한다. 예측할수 있도록 
+
 2. stateless interactions = super important with authentication
 rest API를 설계 할때 server와 client는 완전히 분리되어 있다. 
 common history를 공유하지 않는다. 
@@ -49,14 +50,23 @@ no connection history is stored and no sessions will be used
 서버는 모든 req를 스스로 본다. 
 세션을 저장하지 않고, client를 상관하지 않는다. 
 
+REST는 무상태성 성격을 갖습니다. 다시 말해 작업을 위한 상태정보를 따로 저장하고 관리하지 않습니다. 세션 정보나 쿠키정보를 별도로 저장하고 관리하지 않기 때문에 API 서버는 들어오는 요청만을 단순히 처리하면 됩니다. 때문에 서비스의 자유도가 높아지고 서버에서 불필요한 정보를 관리하지 않음으로써 구현이 단순해집니다.
+
+
 3. cacheable  
 클라이언트에게 response가 얼마동안 valid 되는지를 header에 알려줘야 한다. 
+REST의 가장 큰 특징 중 하나는 HTTP라는 기존 웹표준을 그대로 사용하기 때문에, 웹에서 사용하는 기존 인프라를 그대로 활용이 가능합니다. 따라서 HTTP가 가진 캐싱 기능이 적용 가능합니다. HTTP 프로토콜 표준에서 사용하는 Last-Modified태그나 E-Tag를 이용하면 캐싱 구현이 가능합니다.
+
 4. Client-Server 
 분리, client는 db에 저장되는걸 신경쓰지 않아도 된다. server가 책임진다.
+
 5. Layered System
 다른서버에 전달해야 할때 
 data만을 신경쓰면 된다. 
 API로서 제공되어야 한다. 
+
+REST 서버는 다중 계층으로 구성될 수 있으며 보안, 로드 밸런싱, 암호화 계층을 추가해 구조상의 유연성을 둘 수 있고 PROXY, 게이트웨이 같은 네트워크 기반의 중간매체를 사용할 수 있게 합니다.
+
 6. Code on Demand
 Rest API도 실행가능한 코드를 클라이언트에게 보낼수 있다. 
 하지만 현실적으론 종종볼순 없다. 
